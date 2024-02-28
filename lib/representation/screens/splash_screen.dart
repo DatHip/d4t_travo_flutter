@@ -1,5 +1,6 @@
 import 'package:d4t_travo_flutter/core/helpers/asset_helper.dart';
 import 'package:d4t_travo_flutter/core/helpers/image_helper.dart';
+import 'package:d4t_travo_flutter/representation/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,12 +15,14 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+
+    _routeToIntroScreen();
   }
 
   void _routeToIntroScreen() async {
-    await Future.delayed(Duration())
+    await Future.delayed(const Duration(seconds: 2));
+    Navigator.of(context).pushNamed(IntroScreen.routeName);
   }
 
   @override
