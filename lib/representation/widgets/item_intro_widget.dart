@@ -32,7 +32,7 @@ class ItemIntroWidget extends StatelessWidget {
           height: kMediumPadding * 2,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: kMediumPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kMediumPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

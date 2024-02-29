@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:d4t_travo_flutter/core/constants/dimension_constants.dart';
 import 'package:d4t_travo_flutter/core/constants/textstyle_ext.dart';
 import 'package:d4t_travo_flutter/core/helpers/asset_helper.dart';
+import 'package:d4t_travo_flutter/representation/screens/main_screen.dart';
 import 'package:d4t_travo_flutter/representation/widgets/item_intro_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -74,15 +75,13 @@ class _IntroScreenState extends State<IntroScreen> {
                   count: 3,
                   effect: const ExpandingDotsEffect(
                       activeDotColor: Colors.orange,
-                      dotWidth: kMinPadding,
-                      dotHeight: kMinPadding),
+                      dotWidth: kMinPadding * 2,
+                      dotHeight: kMinPadding * 2),
                 ),
                 GestureDetector(
                   onTap: () {
                     if (_pageController.page == 2) {
-                      _pageController.previousPage(
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.easeIn);
+                      Navigator.of(context).pushNamed(MainScreen.routeName);
                     } else {
                       _pageController.nextPage(
                           duration: const Duration(milliseconds: 500),
